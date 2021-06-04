@@ -16,9 +16,7 @@ public class Recipe {
     private Integer servings;
     private String source;
     private String url;
-    private String direction;
-    //todo add
-    //private Difficulty difficulty;
+    private String directions;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
@@ -94,12 +92,12 @@ public class Recipe {
         this.url = url;
     }
 
-    public String getDirection() {
-        return direction;
+    public String getDirections() {
+        return directions;
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    public void setDirections(String directions) {
+        this.directions = directions;
     }
 
     public Byte[] getImage() {
